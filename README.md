@@ -1,2 +1,1 @@
-The purpose of this project is to sort Walmart grocery lists according to the items' location in a given Walmart store
-The bulk of the relevant code I have written exists in the "views.py", "forms.py", and "form.html" files
+The purpose of this project is to sort Walmart grocery lists according to the items' location in a given Walmart store. The bulk of the relevant code I have written exists in the "views.py", "forms.py", and "form.html" files
