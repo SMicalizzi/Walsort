@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en-US">
+    <form action="/forms/form/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <label for="item">Item:</label><br>
+        <input type="text" id="newitem" name="iname" <br>
+        <input type="submit" name="Add" value="Add">
+        <label for="category">Category:</label>
+        <select name="category" id="cat">
+            <option value="Fresh Produce">Fresh Produce</option>
+            <option value="Bread">Bread</option>
+            <option value="Bakery">Bakery</option>
+            <option value="Frozen">Frozen</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Snacks & Bev">Snacks & Bev</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Deli">Deli</option>
+            <option value="Meat & Seafood">Meat & Seafood</option>
+            <option value="Alcohol">Alcohol</option>
+        </select>
+        <input type="submit" name="Submit" value = "Submit">
+    </form>
+    <body>  
+        {% for item in sorted_list %}
+            <input type = "checkbox" id="Item"> <label for="Item"> {{item.0}}, {{item.1}}</label> <br>
+        {% endfor %}
+        {% for item in newList %}
+            <input type = "checkbox" id="Item"> <label for="Item"> {{item.0}}, {{item.1}}</label> <br>
+        {% endfor %}
+    </body>
+</html>
